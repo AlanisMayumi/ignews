@@ -1,8 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import { GetServerSideProps, GetStaticProps } from "next";
 import Head from "next/head";
 import { SubscribeButton } from "../components/SubscribeButton";
 import { stripe } from "../services/stripe";
-
 import styles from "./home.module.scss";
 
 interface HomeProps {
@@ -10,7 +10,7 @@ interface HomeProps {
   amount: number;
 }
 
-export default function Home({ product }: HomeProps) {
+export default function Home(product: HomeProps) {
   return (
     <>
       <Head>
