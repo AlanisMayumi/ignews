@@ -6,11 +6,13 @@ import { stripe } from "../services/stripe";
 import styles from "./home.module.scss";
 
 interface HomeProps {
-  priceId: string;
-  amount: number;
+  product: {
+    priceId: string;
+    amount: string;
+  };
 }
 
-export default function Home(product: HomeProps) {
+export default function Home({ product }: HomeProps) {
   return (
     <>
       <Head>
